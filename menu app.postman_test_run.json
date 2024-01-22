@@ -1,0 +1,1723 @@
+{
+	"id": "a2a7925d-07af-4dd5-95fc-b6cc1115e9cb",
+	"name": "menu app",
+	"timestamp": "2024-01-22T20:29:40.173Z",
+	"collection_id": "32453042-2314ff67-9e3c-4ee6-864a-403378dda23b",
+	"folder_id": "32453042-489df17d-b31c-4bab-9d65-cc18ed278696",
+	"environment_id": "32453042-d411721b-6596-4d88-ad74-47a5d5ecba8f",
+	"totalPass": 126,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-01-22T20:29:36.343Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "0040d590-c39e-4cdd-88f8-285e790df481",
+			"name": "Создает меню",
+			"url": "127.0.0.1:8000/api/v1/menus",
+			"time": 39,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "54661259-75fb-49b0-a084-02f6d4f8cea4",
+			"name": "Просматривает список подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "880cace6-0ee7-4516-af9f-080ade83a4e2",
+			"name": "Создает подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus",
+			"time": 22,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 201": true,
+				"Response contains 'id' property": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 201": true,
+					"Response contains 'id' property": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true
+				}
+			]
+		},
+		{
+			"id": "997e59ea-d3be-4863-9ac1-3b4e923e4564",
+			"name": "Просматривает список подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is not empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is not empty list": true
+				}
+			]
+		},
+		{
+			"id": "cc0e3958-1e57-4437-a44c-2ac0bf23f26b",
+			"name": "Просматривает определенное подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus/e448d749-fc18-4837-98bd-670ae96f9f29",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true
+				}
+			]
+		},
+		{
+			"id": "88a44538-bce6-439f-8e2e-91115495d335",
+			"name": "Обновляет подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus/e448d749-fc18-4837-98bd-670ae96f9f29",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 200": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 200": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true
+				}
+			]
+		},
+		{
+			"id": "fb08a219-9ea6-4386-8fc0-c848b19cb40c",
+			"name": "Просматривает определенное подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus/e448d749-fc18-4837-98bd-670ae96f9f29",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true
+				}
+			]
+		},
+		{
+			"id": "318fb142-cdbd-4759-b7b9-32f9edab2b4b",
+			"name": "Удаляет подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus/e448d749-fc18-4837-98bd-670ae96f9f29",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "4d511af0-8b22-4922-9b7e-94fe109184de",
+			"name": "Просматривает список подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "af38af73-b9d5-4eba-b6e7-add2b25fec9e",
+			"name": "Просматривает определенное подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7/submenus/e448d749-fc18-4837-98bd-670ae96f9f29",
+			"time": 10,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response detail message is correct": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response detail message is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response detail message is correct": true
+				}
+			]
+		},
+		{
+			"id": "4363a4b0-9c1f-4fea-be4b-2a702cff0b12",
+			"name": "Удаляет меню",
+			"url": "127.0.0.1:8000/api/v1/menus/bde608a1-cd5c-4047-af2f-9d76a6fd60e7",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "be780a8d-be0f-4730-aeb7-2a1ee0e669ea",
+			"name": "Просматривает список меню",
+			"url": "127.0.0.1:8000/api/v1/menus",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "e19e06ad-fafa-4c02-afb5-7829ff27f8da",
+			"name": "Создает меню",
+			"url": "127.0.0.1:8000/api/v1/menus",
+			"time": 23,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "e378a176-323c-47c9-a1a0-3c7a010f26ba",
+			"name": "Создает подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus",
+			"time": 14,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "a5cd9cf3-fec5-4b6f-b7c4-f8811aa15f74",
+			"name": "Просматривает список блюд",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "00045af5-2731-4d89-a07b-34bb3ccdb9b2",
+			"name": "Создает блюдо",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes",
+			"time": 19,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 201": true,
+				"Response contains 'id' property": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true,
+				"Response contains 'description' price": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' price": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 201": true,
+					"Response contains 'id' property": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true,
+					"Response contains 'description' price": true
+				}
+			]
+		},
+		{
+			"id": "47f84767-89e3-4222-b1d1-3f850e8a654b",
+			"name": "Просматривает список блюд",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is not empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is not empty list": true
+				}
+			]
+		},
+		{
+			"id": "dc4db32f-b26b-41a1-a33b-e88e5d775729",
+			"name": "Просматривает определенное блюдо",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes/aa8651e3-2751-4b85-afcc-9cef272186d9",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true,
+				"Response contains 'price' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'price' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true,
+					"Response contains 'price' property": true
+				}
+			]
+		},
+		{
+			"id": "ab62c48d-6b00-4e57-8ad9-a0459c4a97b6",
+			"name": "Обновляет блюдо",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes/aa8651e3-2751-4b85-afcc-9cef272186d9",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Status code is 200": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true,
+				"Response contains 'price' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'price' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Status code is 200": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true,
+					"Response contains 'price' property": true
+				}
+			]
+		},
+		{
+			"id": "e7e6614a-b3b5-46f8-bda1-b20cd86f71f4",
+			"name": "Просматривает определенное блюдо",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes/aa8651e3-2751-4b85-afcc-9cef272186d9",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'title' property": true,
+				"Response contains 'description' property": true,
+				"Response contains 'price' property": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'title' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'description' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'price' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'title' property": true,
+					"Response contains 'description' property": true,
+					"Response contains 'price' property": true
+				}
+			]
+		},
+		{
+			"id": "60901c0b-fc69-4aef-8e4f-e28c86e33897",
+			"name": "Удаляет блюдо",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes/aa8651e3-2751-4b85-afcc-9cef272186d9",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "5f1c249d-90db-49b6-8b0e-be6cd29ec283",
+			"name": "Просматривает список блюд",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "b8e1921f-b853-479e-ac84-67e33247881c",
+			"name": "Просматривает определенное блюдо",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292/dishes/aa8651e3-2751-4b85-afcc-9cef272186d9",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response detail message is correct": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response detail message is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response detail message is correct": true
+				}
+			]
+		},
+		{
+			"id": "5d9e8bf2-8239-4058-99bb-bf71f4cfee84",
+			"name": "Удаляет подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus/ee0bb5c3-218f-4506-b87a-4a9980b54292",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "d1b4ab73-589e-484c-bf55-e709afaa2f11",
+			"name": "Просматривает список подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394/submenus",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "b63d6cba-4fad-4c76-9964-e8b80c586b67",
+			"name": "Удаляет меню",
+			"url": "127.0.0.1:8000/api/v1/menus/5325a17b-6738-4766-a3a0-8a03be71f394",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "4737dca3-07ee-4d6d-9140-a85596ed63db",
+			"name": "Просматривает список меню",
+			"url": "127.0.0.1:8000/api/v1/menus",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "1822cda0-8699-4334-90b1-7e536d083dd1",
+			"name": "Создает меню",
+			"url": "127.0.0.1:8000/api/v1/menus",
+			"time": 63,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				63
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "a46bfb46-0d9e-4e28-9678-027fda75e201",
+			"name": "Создает подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus",
+			"time": 61,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				61
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "e085ed78-f072-425b-b790-5a8a4f20caa5",
+			"name": "Создает блюдо 1",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus/e5b233d5-a954-4d88-86d7-7e53ae67c36c/dishes",
+			"time": 51,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "f0027a17-cac0-4edb-b5b8-838e4a26682c",
+			"name": "Создает блюдо 2",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus/e5b233d5-a954-4d88-86d7-7e53ae67c36c/dishes",
+			"time": 51,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains 'id' property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains 'id' property": true
+				}
+			]
+		},
+		{
+			"id": "a2bbe3c0-9af9-4b15-b30d-fb14469fa8a1",
+			"name": "Просматривает определенное меню",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'submenus_count' property": true,
+				"Response contains 'dishes_count' property": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'submenus_count' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'dishes_count' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'submenus_count' property": true,
+					"Response contains 'dishes_count' property": true
+				}
+			]
+		},
+		{
+			"id": "ab9d3f59-c560-4aae-80b0-ac55c9881706",
+			"name": "Просматривает определенное подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus/e5b233d5-a954-4d88-86d7-7e53ae67c36c",
+			"time": 51,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'dishes_count' property": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'dishes_count' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'dishes_count' property": true
+				}
+			]
+		},
+		{
+			"id": "3d3c9f0f-a2c1-40a4-9dd9-f2aed6909bd9",
+			"name": "Удаляет подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus/e5b233d5-a954-4d88-86d7-7e53ae67c36c",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "3e5f90ba-e73d-4446-bcba-44d09a510cca",
+			"name": "Просматривает список подменю",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "707f49b2-7c4b-4a0f-8eb2-1f1ebfc481c0",
+			"name": "Просматривает список блюд",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08/submenus/e5b233d5-a954-4d88-86d7-7e53ae67c36c/dishes",
+			"time": 53,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		},
+		{
+			"id": "f0b683ec-abac-4e63-936b-82be165b88c5",
+			"name": "Просматривает определенное меню",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true,
+				"Response contains 'id' property": true,
+				"Response contains 'submenus_count' property": true,
+				"Response contains 'dishes_count' property": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'id' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'submenus_count' property": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'dishes_count' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Success answer": true,
+					"Response contains 'id' property": true,
+					"Response contains 'submenus_count' property": true,
+					"Response contains 'dishes_count' property": true
+				}
+			]
+		},
+		{
+			"id": "e505d5fa-1220-4e36-a99a-04215cbec9be",
+			"name": "Удаляет меню",
+			"url": "127.0.0.1:8000/api/v1/menus/035a5078-c10e-45bb-bb38-67ca56d15d08",
+			"time": 55,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Success answer": true
+				}
+			]
+		},
+		{
+			"id": "e2556549-d113-49c9-82a9-f70067d27669",
+			"name": "Просматривает список меню",
+			"url": "127.0.0.1:8000/api/v1/menus",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Success answer": true,
+				"Response is empty list": true
+			},
+			"testPassFailCounts": {
+				"Success answer": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is empty list": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Success answer": true,
+					"Response is empty list": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1215,
+	"collection": {
+		"requests": [
+			{
+				"id": "0040d590-c39e-4cdd-88f8-285e790df481",
+				"method": "POST"
+			},
+			{
+				"id": "54661259-75fb-49b0-a084-02f6d4f8cea4",
+				"method": "GET"
+			},
+			{
+				"id": "880cace6-0ee7-4516-af9f-080ade83a4e2",
+				"method": "POST"
+			},
+			{
+				"id": "997e59ea-d3be-4863-9ac1-3b4e923e4564",
+				"method": "GET"
+			},
+			{
+				"id": "cc0e3958-1e57-4437-a44c-2ac0bf23f26b",
+				"method": "GET"
+			},
+			{
+				"id": "88a44538-bce6-439f-8e2e-91115495d335",
+				"method": "PATCH"
+			},
+			{
+				"id": "fb08a219-9ea6-4386-8fc0-c848b19cb40c",
+				"method": "GET"
+			},
+			{
+				"id": "318fb142-cdbd-4759-b7b9-32f9edab2b4b",
+				"method": "DELETE"
+			},
+			{
+				"id": "4d511af0-8b22-4922-9b7e-94fe109184de",
+				"method": "GET"
+			},
+			{
+				"id": "af38af73-b9d5-4eba-b6e7-add2b25fec9e",
+				"method": "GET"
+			},
+			{
+				"id": "4363a4b0-9c1f-4fea-be4b-2a702cff0b12",
+				"method": "DELETE"
+			},
+			{
+				"id": "be780a8d-be0f-4730-aeb7-2a1ee0e669ea",
+				"method": "GET"
+			},
+			{
+				"id": "e19e06ad-fafa-4c02-afb5-7829ff27f8da",
+				"method": "POST"
+			},
+			{
+				"id": "e378a176-323c-47c9-a1a0-3c7a010f26ba",
+				"method": "POST"
+			},
+			{
+				"id": "a5cd9cf3-fec5-4b6f-b7c4-f8811aa15f74",
+				"method": "GET"
+			},
+			{
+				"id": "00045af5-2731-4d89-a07b-34bb3ccdb9b2",
+				"method": "POST"
+			},
+			{
+				"id": "47f84767-89e3-4222-b1d1-3f850e8a654b",
+				"method": "GET"
+			},
+			{
+				"id": "dc4db32f-b26b-41a1-a33b-e88e5d775729",
+				"method": "GET"
+			},
+			{
+				"id": "ab62c48d-6b00-4e57-8ad9-a0459c4a97b6",
+				"method": "PATCH"
+			},
+			{
+				"id": "e7e6614a-b3b5-46f8-bda1-b20cd86f71f4",
+				"method": "GET"
+			},
+			{
+				"id": "60901c0b-fc69-4aef-8e4f-e28c86e33897",
+				"method": "DELETE"
+			},
+			{
+				"id": "5f1c249d-90db-49b6-8b0e-be6cd29ec283",
+				"method": "GET"
+			},
+			{
+				"id": "b8e1921f-b853-479e-ac84-67e33247881c",
+				"method": "GET"
+			},
+			{
+				"id": "5d9e8bf2-8239-4058-99bb-bf71f4cfee84",
+				"method": "DELETE"
+			},
+			{
+				"id": "d1b4ab73-589e-484c-bf55-e709afaa2f11",
+				"method": "GET"
+			},
+			{
+				"id": "b63d6cba-4fad-4c76-9964-e8b80c586b67",
+				"method": "DELETE"
+			},
+			{
+				"id": "4737dca3-07ee-4d6d-9140-a85596ed63db",
+				"method": "GET"
+			},
+			{
+				"id": "1822cda0-8699-4334-90b1-7e536d083dd1",
+				"method": "POST"
+			},
+			{
+				"id": "a46bfb46-0d9e-4e28-9678-027fda75e201",
+				"method": "POST"
+			},
+			{
+				"id": "e085ed78-f072-425b-b790-5a8a4f20caa5",
+				"method": "POST"
+			},
+			{
+				"id": "f0027a17-cac0-4edb-b5b8-838e4a26682c",
+				"method": "POST"
+			},
+			{
+				"id": "a2bbe3c0-9af9-4b15-b30d-fb14469fa8a1",
+				"method": "GET"
+			},
+			{
+				"id": "ab9d3f59-c560-4aae-80b0-ac55c9881706",
+				"method": "GET"
+			},
+			{
+				"id": "3d3c9f0f-a2c1-40a4-9dd9-f2aed6909bd9",
+				"method": "DELETE"
+			},
+			{
+				"id": "3e5f90ba-e73d-4446-bcba-44d09a510cca",
+				"method": "GET"
+			},
+			{
+				"id": "707f49b2-7c4b-4a0f-8eb2-1f1ebfc481c0",
+				"method": "GET"
+			},
+			{
+				"id": "f0b683ec-abac-4e63-936b-82be165b88c5",
+				"method": "GET"
+			},
+			{
+				"id": "e505d5fa-1220-4e36-a99a-04215cbec9be",
+				"method": "DELETE"
+			},
+			{
+				"id": "e2556549-d113-49c9-82a9-f70067d27669",
+				"method": "GET"
+			}
+		]
+	}
+}
