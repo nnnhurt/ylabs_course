@@ -11,7 +11,7 @@
    ```createuser -- interactive```
 ### Запуск
 1. Для запуска сервера воспользуйтесь командой:
-   ```su - postgres -c "sudo pg_ctlcluster 14 main start"
+   ```su - postgres -c "sudo pg_ctlcluster 14 main start```
 2. Для установки зависимостей:
    ```python -m venv venv```
    ```source venv/bin/activate```
