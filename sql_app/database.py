@@ -14,7 +14,7 @@ DB_HOST = os.getenv("DB_HOST")
 
 
 SQLALCHEMY_DATABASE_URL = (
-    f"postgresql://{DB_USER}:123456@{DB_HOST}/ylabs"
+    f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 )
 
 
