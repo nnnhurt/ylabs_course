@@ -6,15 +6,22 @@ from sql_app import models, schemas
 
 
 def get_dish(db: Session, submenu_id: int, dish_id: int):
-    return (
+    db_dish = (
         db.query(models.Dish)
         .filter(models.Dish.submenu_id == submenu_id)
         .filter(models.Dish.id == dish_id).first()
     )
+    if db_dish is not None:
+        db_dish.price = str(db_dish.price)
+    return db_dish
 
 
 def get_all_dish(db: Session, submenu_id: int):
-    return db.query(models.Dish).filter(models.Dish.submenu_id == submenu_id).all()
+    db_dishes = db.query(models.Dish).filter(
+        models.Dish.submenu_id == submenu_id).all()
+    for dish in db_dishes:
+        dish.price = str(dish.price)
+    return db_dishes
 
 
 def create_dish(db: Session, dish: schemas.CreateDish, submenu_id: int):
@@ -23,6 +30,8 @@ def create_dish(db: Session, dish: schemas.CreateDish, submenu_id: int):
     db.add(new_dish)
     db.commit()
     db.refresh(new_dish)
+    new_dish.price = str(new_dish.price)
+    return new_dish
 
 
 def update_dish(db: Session, dish_id: int, dish: schemas.CreateDish, submenu_id: int):
@@ -32,6 +41,8 @@ def update_dish(db: Session, dish_id: int, dish: schemas.CreateDish, submenu_id:
     db_dish.price = dish.price
     db.commit()
     db.refresh(db_dish)
+    if db_dish is not None:
+        db_dish.price = str(db_dish.price)
     return db_dish
 
 
@@ -105,7 +116,7 @@ def create_menu(db: Session, menu: schemas.CreateMenu):
     return new_menu
 
 
-def update_menu(db: Session, menu_id: int, menu: schemas.CreateMenu):
+def update_menu(db: Session, menu_id: int, menu: schemas.Menu):
     db_menu = get_menu(db, menu_id)
     db_menu.title = menu.title
     db_menu.description = menu.description

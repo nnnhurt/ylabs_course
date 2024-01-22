@@ -12,6 +12,7 @@ class Dish(CreateDish):
     class Config:
         orm_mode = True
     id: UUID
+    price: str
 
 
 class CreateSubmenu(BaseModel):

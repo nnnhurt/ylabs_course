@@ -44,7 +44,7 @@ def create_menu(menu: schemas.CreateMenu, db: Session = Depends(get_db)):
 
 
 @router.patch("/menus/{menu_id}", response_model=schemas.Menu)
-def update_menu(menu_id: UUID, menu: schemas.Menu, db: Session = Depends(get_db)):
+def update_menu(menu_id: UUID, menu: schemas.CreateMenu, db: Session = Depends(get_db)):
     db_menu = crud.get_menu(db, menu_id=menu_id)
     if db_menu is None:
         raise HTTPException(
