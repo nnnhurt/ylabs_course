@@ -1,4 +1,4 @@
-#HW1
+# HW1
 
 Домашняя работа для YLABS
 
@@ -10,7 +10,7 @@
    ```createdb <имя базы>```
    ```createuser -- interactive```
 ### Запуск
-1. Для запуска сервепа воспользуйтесь командой:
+1. Для запуска сервера воспользуйтесь командой:
    ```su - postgres -c "sudo pg_ctlcluster 14 main start"
 2. Для установки зависимостей:
    ```python -m venv venv```
@@ -21,4 +21,4 @@
 4. Запуск api-сервера:
    ```unicorn sql_app.main:app --reload```
 
-##Результаты тестов находятся в файле menu app.postman_test_run.json
+## Результаты тестов находятся в файле menu app.postman_test_run.json
